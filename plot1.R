@@ -1,9 +1,9 @@
-# if(!file.exists('data')) {
-#     dir.create('data')
-# }
-# fileURL <- 'https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip'
-# download.file(fileURL, destfile='data/electric.zip', method='curl')
-#  unzip('data/electric.zip',exdir='data')
+if(!file.exists('data')) {
+    dir.create('data')
+}
+fileURL <- 'https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip'
+download.file(fileURL, destfile='data/electric.zip', method='curl')
+ unzip('data/electric.zip',exdir='data')
 
 data <- read.table('data/household_power_consumption.txt', 
                    sep=";",
